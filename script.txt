@@ -1,0 +1,3 @@
+CREATE(dylan:Musico {nome: 'Bob Dylan'})
+CREATE(hendrix:Musico {nome: 'Jimi Hendrix'})
+CREATE(dickinson:Musico {nome: 'Bruce Dickinson'})

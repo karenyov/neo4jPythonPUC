@@ -1,0 +1,16 @@
+from neo4jrestclient.client import GraphDatabase
+db = GraphDatabase ("http://localhost:7474", username="neo4j", password="nosql")
+
+user = db.labels.create("Usuario")
+u1 = db.nodes.create(nane="Bob")
+u2 = db.nodes.create(nane="Alice")
+u3 = db.nodes.create(nane="Lea")
+u4 = db.nodes.create(nane="Ana")
+u5 = db.nodes.create(nane="Joel")
+
+user.add(u1,u2,u3,u4,u5)
+
+u1.relationships.create("follows", u2)
+u4.relationships.create("follows", u1)
+u2.relationships.create("follows", u3)
+u2.relationships.create("follows", u5)
